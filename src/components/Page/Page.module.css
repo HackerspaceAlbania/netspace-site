@@ -1,4 +1,8 @@
-.pageComponent{
+.pageContent{
     background-color: #494949;
     color: #fff;
+    min-height: calc(100vh - 45px);
+}
+.pageContent > h1{
+    margin: 20px;
 }
