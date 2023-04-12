@@ -13,7 +13,7 @@ const Page: FC<PageProps> = (props) => {
         <Navtabs />
         <div className={styles.pageContent}>
           <br />
-          <h1>{props.title}</h1>
+          <h1 className={styles.pageTitle}>{props.title}</h1>
           {props.children}
           <br />
         </div>

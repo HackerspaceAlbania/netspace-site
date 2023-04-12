@@ -3,6 +3,20 @@
     color: #fff;
     min-height: calc(100vh - 45px);
 }
-.pageContent > h1{
+.pageContent > h1.pageTitle{
     margin: 20px;
+    font-size: 40px;
+    font-family: Inter;
+    text-align: center;
+    position: relative;
+}
+.pageContent > h1.pageTitle::after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 75px;
+    height: 4px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
