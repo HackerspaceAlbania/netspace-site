@@ -2,6 +2,7 @@ import React from 'react'
 import Page from '../components/Page';
 import { HeadFC } from 'gatsby';
 import * as styles from '../styles/Events.module.css'
+import Event from '../components/Event'
 
 const EventsPage = () => {
     const pageTitle = "Events";
@@ -16,17 +17,7 @@ const EventsPage = () => {
           </h2>
           <div className={styles.events}>
             {events.map(i => (
-              <div className={styles.eventBox}>
-                <div className={styles.date}>
-                  <h3>MAY</h3>
-                  <h2>22</h2>
-                </div>
-                <div className={styles.title}>
-                  <h3>Hack with Kali in Troja</h3>
-                  <p>Thu 6:00-7:00pm </p>
-                </div>
-                <input type="button" value="ATTEND" />
-              </div>
+              <Event />
             ))}
           </div>
           <h2 className="footer">
