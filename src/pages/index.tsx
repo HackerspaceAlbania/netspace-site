@@ -10,16 +10,14 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Page title={pageTitle}>
       <div className={styles.rootPage}>
-        <div className={styles.flexbox}>
-          <span></span>
-          <h2>
-            "Two years from now, spam will be solved."
-            <br /> 
-            ~ Bill Gates, 2004
-          </h2>
-          <div className={styles.imgBox}>
-            <img src={qrCode} alt="" />
-          </div>
+        <span></span>
+        <h2>
+          "Two years from now, spam will be solved."
+          <br /> 
+          ~ Bill Gates, 2004
+        </h2>
+        <div className={styles.imgBox}>
+          <img src={qrCode} alt="" />
         </div>
       </div>
     </Page>

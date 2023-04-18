@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 50px;
     color: #D9D9D9;
     max-width: 1450px;
@@ -50,4 +51,26 @@
     display: flex;
     justify-content: space-around;
     margin: 50px 0 20px;
+}
+
+@media (max-width: 950px) {
+    .contactPage{
+        flex-direction: column;
+        padding: 50px 20px 20px;
+    }
+    .midSection{
+        order: 1;
+    }
+    .rightSection{
+        flex-direction: row;
+        text-align: left;
+    }
+}
+@media (max-width: 500px) {
+    .contactPage svg{
+        font-size: 45px;
+    }
+    .info > h3{
+        font-size: 15px;
+    }
 }

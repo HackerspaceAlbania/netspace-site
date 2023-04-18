@@ -21,3 +21,21 @@
     max-height: calc(100vh - 450px);
     overflow-y: scroll;
 }
+
+@media (max-width: 950px) {
+    .eventsPage{
+        max-height: calc(100vh - 120px);
+        gap: 20px;
+    }
+    .events{
+        max-height: none;
+    }
+}
+@media (max-width: 650px) {
+    .eventsPage > h2{
+        font-size: 18px;
+    }
+    .events{
+        gap: 20px;
+    }
+}

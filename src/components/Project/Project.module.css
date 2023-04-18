@@ -1,8 +1,10 @@
 .projectBox{
     text-align: center;
+    padding: 15px;
 }
 .imgBox{
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     overflow: hidden;
     aspect-ratio: 3/2;
     border-radius: 30px;

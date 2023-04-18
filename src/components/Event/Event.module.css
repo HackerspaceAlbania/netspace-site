@@ -41,3 +41,61 @@
     border-radius: 25px;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .eventBox .date > h3{
+        font-size: 12px;
+    }
+    .eventBox .date > h2{
+        font-size: 20px;
+    }
+    .eventBox .title h3{
+        font-size: 20px;
+    }
+    .eventBox .title p{
+        font-size: 16px;
+    }
+    .eventBox input{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 650px) {
+    .eventBox{
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
+    .eventBox .title h3{
+        font-size: 15px;
+    }
+    .eventBox .title p{
+        font-size: 12px;
+    }
+    .eventBox input{
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px) {
+    .eventBox .title h3{
+        width : 125px;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
+    }
+    .eventBox .title p{
+        font-size: 12px;
+    }
+    .eventBox input{
+        width : 75px;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) {
+    .eventBox .title h3{
+        width : 100px;
+    }
+}

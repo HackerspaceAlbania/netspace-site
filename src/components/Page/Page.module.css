@@ -1,7 +1,8 @@
 .pageContent{
     background-color: #494949;
     color: #fff;
-    min-height: calc(100vh - 45px);
+    min-height: calc(100vh - 50px);
+    width: 100%;
 }
 .pageContent > h1.pageTitle{
     margin: 20px;
@@ -18,4 +19,14 @@
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 950px) {
+    .pageComponent{
+        display: flex;
+    }
+    .pageContent {
+        min-height: 100vh;
+        margin-left: 60px;
+    }
 }

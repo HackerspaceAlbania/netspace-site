@@ -6,3 +6,9 @@ body{
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
+
+@media (max-width: 950px) {
+    body{
+        background-color: #494949;
+    }
+}
