@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 import thumbnail from '../../images/project-thumbnail.jpg'
 import * as styles from './Project.module.css'
+import { Link } from 'gatsby';
 
-const Project = () => {
+interface ComponentProps {
+  projectData?: any;
+}
+
+const Project: FC<ComponentProps> = (props) => {
   return (
-    <div className={styles.projectBox}>
-        <div className={styles.imgBox}>
-          <img src={thumbnail} alt="" />
-        </div>
-        <h3>Project Name</h3>
-        <p>~ Persons Name</p>
-    </div>
+    <Link to={props.projectData.slug} className={styles.projectBox}>
+      <div className={styles.imgBox}>
+        <img src={thumbnail} alt="" />
+      </div>
+      <h3>{props.projectData.title}</h3>
+      <p>~ {props.projectData.author}</p>
+    </Link>
   )
 }
 

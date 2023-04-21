@@ -45,7 +45,7 @@ export const Head: HeadFC = () => <title>NetSpace - Events</title>
 
 export const eventsQuery = graphql`
   query{
-    allMdx {
+    allMdx(filter: {internal: {contentFilePath: {regex: "/events/"}}}) {
       nodes {
         id
         frontmatter {

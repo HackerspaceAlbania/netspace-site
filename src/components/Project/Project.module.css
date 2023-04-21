@@ -1,6 +1,8 @@
 .projectBox{
     text-align: center;
     padding: 15px;
+    text-decoration: none;
+    color: #fff;
 }
 .imgBox{
     max-width: 400px;

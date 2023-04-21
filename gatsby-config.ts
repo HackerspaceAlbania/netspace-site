@@ -23,6 +23,12 @@ const config: GatsbyConfig = {
         name: 'events',
         path: `${__dirname}/mdx/events/`,
       }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: `${__dirname}/mdx/projects/`,
+      }
     }
   ]
 };
