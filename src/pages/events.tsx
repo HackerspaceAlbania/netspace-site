@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { FC, useState } from 'react'
 import Page from '../components/Page';
-import { HeadFC } from 'gatsby';
+import { HeadFC, graphql } from 'gatsby';
 import * as styles from '../styles/Events.module.css'
 import Event from '../components/Event'
 
-const EventsPage = () => {
+interface PageProps {
+  data?: any
+}
+
+const EventsPage: FC<PageProps>  = ({ data }) => {
     const pageTitle = "Events";
-    const events = [1, 2, 3, 2, 3, 2, 3];
+    const events = data.allMdx.nodes;
+    const [activeEvent, setActiveEvent] = useState("")
 
     return (
       <Page title={pageTitle}>
@@ -16,8 +21,14 @@ const EventsPage = () => {
             dont forget to bring your laptop and some cookies!
           </h2>
           <div className={styles.events}>
-            {events.map(i => (
-              <Event />
+            {events.map((item: any) => (
+              <Event 
+                key={item.id}
+                eventData={item.frontmatter}
+                body={item.body}
+                onClick={() => setActiveEvent(item.id)}
+                isActive={activeEvent === item.id}
+              />
             ))}
           </div>
           <h2 className="footer">
@@ -31,3 +42,22 @@ const EventsPage = () => {
 export default EventsPage
 
 export const Head: HeadFC = () => <title>NetSpace - Events</title>
+
+export const eventsQuery = graphql`
+  query{
+    allMdx {
+      nodes {
+        id
+        frontmatter {
+          slug
+          title
+          date
+          time
+          location
+          speaker
+        }
+        body
+      }
+    }
+  }
+`

@@ -9,14 +9,22 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+  plugins: [
+    "gatsby-plugin-mdx", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/",
+      },
+      __key: "pages",
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'events',
+        path: `${__dirname}/mdx/events/`,
+      }
+    }
+  ]
 };
 
 export default config;
