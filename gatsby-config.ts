@@ -10,7 +10,9 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-mdx", {
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp", {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",
@@ -29,7 +31,8 @@ const config: GatsbyConfig = {
         name: 'projects',
         path: `${__dirname}/mdx/projects/`,
       }
-    }
+    },
+    "gatsby-plugin-mdx",
   ]
 };
 

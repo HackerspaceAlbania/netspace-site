@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Page from '../../components/Page';
-import { HeadFC, Link, graphql } from 'gatsby';
+import { HeadFC, graphql } from 'gatsby';
 import Project from '../../components/Project';
 import * as styles from '../../styles/Projects.module.css'
 
@@ -42,6 +42,11 @@ export const projectsQuery = graphql`
           thumbnail
           date
           time
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }
