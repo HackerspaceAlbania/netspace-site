@@ -1,0 +1,23 @@
+version: '3'
+name: nsa-dev
+
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: ./dev.Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nsa-dev.rule=Host(`nsa.kiltonpisli.me`)"
+      - "traefik.http.routers.nsa-dev.entrypoints=dev"
+      - "traefik.http.services.nsa-dev.loadbalancer.server.port=8000"
+    volumes:
+    - "./:/app"
+    entrypoint: 
+    - "/bin/sh"
+    - "-c"
+    - "npm install && npm run develop"
+    network_mode: bridge
+    restart: always
+
+# docker compose -f docker-compose.dev.yaml up -d

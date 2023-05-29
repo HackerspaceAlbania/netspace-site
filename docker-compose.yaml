@@ -1,9 +1,11 @@
 version: '3'
+name: nsa-dev
 
 services:
   frontend:
     build:
       context: ./
+      dockerfile: ./Dockerfile
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.nsa.rule=Host(`nsa.kiltonpisli.me`)"
@@ -11,3 +13,4 @@ services:
     network_mode: bridge
     restart: always
 
+# docker compose up -d
