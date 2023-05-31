@@ -1,5 +1,5 @@
 version: '3'
-name: nsa-dev
+name: nsa-prod
 
 services:
   frontend:
