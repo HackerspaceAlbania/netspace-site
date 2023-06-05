@@ -17,4 +17,4 @@ services:
     network_mode: bridge
     restart: always
 
-# docker compose -f docker-compose.dev.yaml up -d
+# docker compose -f docker-compose.localdev.yaml up -d
