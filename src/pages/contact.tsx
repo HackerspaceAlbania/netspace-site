@@ -54,18 +54,18 @@ const ContactPage = () => {
           </div>
           
           <div className={styles.map}>
-            <CustomMap 
+            {/* <CustomMap 
               center={{lat: 41.336491, lng: 19.816997}}
               zoom={17}
-            />
-            {/* <iframe 
+            /> */}
+            <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1261.2068116818757!2d19.81645330736079!3d41.33633322681492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350311588670db5%3A0x7123da993a1f5d7b!2sMulliri%20Plus!5e1!3m2!1sen!2suk!4v1687444114690!5m2!1sen!2suk" 
               width="100%" 
               style={{border:0}} 
               allowFullScreen={false} 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe> */}
+            ></iframe>
           </div>
         </div>
       </Page>
