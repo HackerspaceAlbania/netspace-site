@@ -1,5 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  // path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `netspace-site`,
@@ -19,12 +24,6 @@ const config: GatsbyConfig = {
         "path": "./src/pages/",
       },
       __key: "pages",
-    }, {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'events',
-        path: `${__dirname}/mdx/events/`,
-      }
     }, {
       resolve: 'gatsby-source-filesystem',
       options: {

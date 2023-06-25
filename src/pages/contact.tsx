@@ -40,9 +40,9 @@ const ContactPage = () => {
       <Page title={pageTitle}>
         <div className={styles.contactPage}>
           <div className={styles.contactSection}>
-            {contactInfo.map((item) => {
+            {contactInfo.map((item, i) => {
               return (
-                <a href="#" className={styles.infoBox}>
+                <a href="#" className={styles.infoBox} key={i}>
                   {item.icon}
                   <div className={styles.details}>
                     <h3>{item.title}</h3>

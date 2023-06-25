@@ -17,3 +17,13 @@ export const getMonth = (date: any) => {
     const monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return monthShortNames[formatDate(date).getDay()];
 }
+
+export const getTime = (date: any) => {
+    const hours = formatDate(date).getHours();
+    const minutes = formatDate(date).getMinutes();
+    
+    const formattedHours = String(hours).padStart(2, '0');
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    
+    return `${formattedHours}:${formattedMinutes}`;
+}

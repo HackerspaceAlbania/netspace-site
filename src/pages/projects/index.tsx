@@ -12,6 +12,8 @@ const ProjectsPage: FC<PageProps> = ({ data }) => {
     const pageTitle = "Projects";
     const projects = data.allMdx.nodes;
 
+    console.log(projects)
+
     return (
       <Page title={pageTitle}>
         <div className={styles.projectsPage}>
