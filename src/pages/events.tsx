@@ -21,7 +21,7 @@ const EventsPage: FC<PageProps>  = ({ data }) => {
             dont forget to bring your laptop and some cookies!
           </h2>
           <div className={styles.events}>
-            {events.map((item: any) => (
+            {/* {events.map((item: any) => (
               <Event 
                 key={item.id}
                 eventData={item.frontmatter}
@@ -29,7 +29,7 @@ const EventsPage: FC<PageProps>  = ({ data }) => {
                 onClick={() => setActiveEvent(item.id)}
                 isActive={activeEvent === item.id}
               />
-            ))}
+            ))} */}
           </div>
           <h2 className="footer">
             Lets hack this together!
@@ -45,18 +45,9 @@ export const Head: HeadFC = () => <title>NetSpace - Events</title>
 
 export const eventsQuery = graphql`
   query{
-    allMdx {
+    allMdx(filter: {internal: {contentFilePath: {regex: "/events/"}}}) {
       nodes {
         id
-        frontmatter {
-          slug
-          title
-          date
-          time
-          location
-          speaker
-        }
-        body
       }
     }
   }

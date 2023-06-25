@@ -1,7 +1,7 @@
 .contactPage{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
     padding: 50px;
     color: #D9D9D9;
@@ -10,47 +10,48 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.contactPage svg{
-    font-size: 75px;
-}
-.leftSection, .rightSection{
+.contactSection{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
     flex: 1;
 }
-.rightSection{
-    flex-direction: row-reverse;
-    text-align: right;
+.infoBox{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #D9D9D9;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
-.info{
+.infoBox:hover{
+    transform: scale(1.01);
+    background-color: #D9D9D9;
+    color: #000;
+}
+.infoBox svg{
+    font-size: 75px;
+}
+.infoBox .details{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.info > h3{
+.infoBox .details > h3{
     font-size: 20px;
     margin: 0;
 }
-.midSection{
-    background-color: #D9D9D9;
-    color: #000;
+
+.map{
     flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 75px 50px 25px;;
-    max-width: 300px;
-    border-radius: 40px;
-}
-.midSection .twoIcons{
-    display: flex;
-    justify-content: space-between;
-}
-.midSection .threeIcons{
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0 20px;
+    align-items: stretch;
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 @media (max-width: 950px) {
@@ -58,19 +59,15 @@
         flex-direction: column;
         padding: 50px 20px 20px;
     }
-    .midSection{
-        order: 1;
-    }
-    .rightSection{
-        flex-direction: row;
-        text-align: left;
-    }
 }
 @media (max-width: 500px) {
-    .contactPage svg{
+    .infoBox svg{
         font-size: 45px;
     }
-    .info > h3{
+    .infoBox .details > h3{
         font-size: 15px;
+    }
+    .map{
+        min-height: 300px;
     }
 }

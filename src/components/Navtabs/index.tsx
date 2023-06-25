@@ -39,7 +39,7 @@ const Navtabs = () => {
           <Link to="/" className={location?.pathname === "/" ? styles.active : ""}>Root</Link>
           <Link to="/projects" className={location?.pathname === "/projects/" ? styles.active : ""}>Projects</Link>
           <Link to="/events" className={location?.pathname === "/events/" ? styles.active : ""}>Events</Link>
-          <Link to="/about" className={location?.pathname === "/about/" ? styles.active : ""}>About</Link>
+          {/* <Link to="/about" className={location?.pathname === "/about/" ? styles.active : ""}>About</Link> */}
           <Link to="/contact" className={location?.pathname === "/contact/" ? styles.active : ""}>Contact</Link>
           <Link to="/support" className={location?.pathname === "/support/" ? styles.active : ""}>Support Us</Link>
         </nav>
@@ -60,7 +60,7 @@ const Navtabs = () => {
           <Link onClick={closeMenu} to="/" className={isRootPath ? styles.rootActive : styles.root}><img src={isRootPath ? nsaBlue : nsaWhite} /></Link>
           <Link onClick={closeMenu} to="/projects" className={location?.pathname === "/projects/" ? styles.active : ""}><GoProject /></Link>
           <Link onClick={closeMenu} to="/events" className={location?.pathname === "/events/" ? styles.active : ""}><MdCrisisAlert /></Link>
-          <Link onClick={closeMenu} to="/about" className={location?.pathname === "/about/" ? styles.active : ""}><BiSpreadsheet /></Link>
+          {/* <Link onClick={closeMenu} to="/about" className={location?.pathname === "/about/" ? styles.active : ""}><BiSpreadsheet /></Link> */}
           <Link onClick={closeMenu} to="/contact" className={location?.pathname === "/contact/" ? styles.active : ""}><FaMailBulk /></Link>
           <Link onClick={closeMenu} to="/support" className={location?.pathname === "/support/" ? styles.active : ""}><GiPayMoney /></Link>
         </nav>
@@ -69,7 +69,7 @@ const Navtabs = () => {
         <Link onClick={closeMenu} to="/" className={location?.pathname === "/" ? styles.active : ""}>Root</Link>
         <Link onClick={closeMenu} to="/projects" className={location?.pathname === "/projects/" ? styles.active : ""}>Projects</Link>
         <Link onClick={closeMenu} to="/events" className={location?.pathname === "/events/" ? styles.active : ""}>Events</Link>
-        <Link onClick={closeMenu} to="/about" className={location?.pathname === "/about/" ? styles.active : ""}>About</Link>
+        {/* <Link onClick={closeMenu} to="/about" className={location?.pathname === "/about/" ? styles.active : ""}>About</Link> */}
         <Link onClick={closeMenu} to="/contact" className={location?.pathname === "/contact/" ? styles.active : ""}>Contact</Link>
         <Link onClick={closeMenu} to="/support" className={location?.pathname === "/support/" ? styles.active : ""}>Support Us</Link>
       </div>

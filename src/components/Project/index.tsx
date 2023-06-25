@@ -1,16 +1,26 @@
-import React from 'react'
-import thumbnail from '../../images/project-thumbnail.jpg'
+import React, { FC } from 'react'
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import * as styles from './Project.module.css'
+import { Link } from 'gatsby';
 
-const Project = () => {
+interface ComponentProps {
+  projectData?: any;
+}
+
+const Project: FC<ComponentProps> = (props) => {
+  const thumbnail = getImage(props.projectData.hero_image) as IGatsbyImageData;
   return (
-    <div className={styles.projectBox}>
-        <div className={styles.imgBox}>
-          <img src={thumbnail} alt="" />
-        </div>
-        <h3>Project Name</h3>
-        <p>~ Persons Name</p>
-    </div>
+    <Link to={props.projectData.slug} className={styles.projectBox}>
+      <div className={styles.imgBox}>
+        <GatsbyImage
+          image={thumbnail}
+          alt={""}
+          className={styles.gatsbyImageWrapper}
+        />
+      </div>
+      <h3>{props.projectData.title}</h3>
+      <p>~ {props.projectData.author}</p>
+    </Link>
   )
 }
 
