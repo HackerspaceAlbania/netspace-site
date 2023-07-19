@@ -32,4 +32,4 @@ jobs:
           static_site_generator: gatsby
       - name: Deploy
         id: deployment
-        run: npm run deploy:ci
+        run: npm run build
