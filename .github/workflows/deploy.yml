@@ -33,3 +33,4 @@ jobs:
         uses: actions/configure-pages@v3
         with:
           static_site_generator: gatsby
+          path: ./
