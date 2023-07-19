@@ -32,5 +32,4 @@ jobs:
           static_site_generator: gatsby
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v3
         run: npm run deploy:ci
