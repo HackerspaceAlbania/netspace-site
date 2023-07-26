@@ -14,3 +14,7 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
+      - run : npm install && npm run build
+      - uses: actions/deploy-pages@v2
+      
+          
