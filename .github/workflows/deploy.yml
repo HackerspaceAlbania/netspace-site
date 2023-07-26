@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install
       - name: Deploy
-        id: deployment
+        id: Build
         run: npm run build
       - name: Setup Pages
         id: pages
