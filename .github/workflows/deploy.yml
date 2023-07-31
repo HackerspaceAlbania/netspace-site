@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Gatsby
-        run: npm install -g gatsby
+        run: npm install 
       - name: Build Gatsby Site
         run: npm run build
       - name: Deploy to GH-Pages
