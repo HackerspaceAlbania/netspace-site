@@ -14,7 +14,7 @@ jobs:
       - name: Install Gatsby
         run: npm install -g gatsby
       - name: Build Gatsby Site
-        run: gatsby build
+        run: npm run build
       - name: Deploy to GH-Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
