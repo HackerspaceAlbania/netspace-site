@@ -3,8 +3,9 @@ name: Deploy Gatsby Site
 on:
   push:
     branches:
-      - main
-
+      - master
+  workflow_dispatch:
+    inputs: {}
 jobs:
   build:
     runs-on: ubuntu-latest
