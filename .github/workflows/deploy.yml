@@ -1,27 +1,31 @@
-name: Deploy Gatsby Site
-
+name: Deploy Gatsby Site to Web Branch
 on:
   push:
     branches:
       - master
-  workflow_dispatch:
-    inputs: {}
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-  
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install Gatsby
-        run: npm install 
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build Gatsby Site
         run: npm run build
-      - name: Deploy to GH-Pages
+
+      - name: Deploy to Web Branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          publish-branch: gh-pages
-          directory: public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
